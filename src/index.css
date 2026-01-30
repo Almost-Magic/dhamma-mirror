@@ -2,95 +2,129 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* 
+ * DHAMMA MIRROR DESIGN SYSTEM
+ * 
+ * A serene, contemplative palette inspired by natural elements:
+ * - Sage greens for calm and grounding
+ * - Warm earth tones for wisdom and stability  
+ * - Soft neutrals for clarity and space
+ * 
+ * Typography: Clean, readable, with generous spacing
+ * Mood: Peaceful, focused, supportive
+ */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core backgrounds - warm off-whites */
+    --background: 45 20% 98%;
+    --foreground: 30 10% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Cards - subtle warmth */
+    --card: 45 15% 97%;
+    --card-foreground: 30 10% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popovers */
+    --popover: 45 15% 99%;
+    --popover-foreground: 30 10% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Sage green (calm, grounding) */
+    --primary: 150 25% 35%;
+    --primary-foreground: 45 20% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Muted sage */
+    --secondary: 150 15% 92%;
+    --secondary-foreground: 150 20% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Soft grey-green */
+    --muted: 150 10% 94%;
+    --muted-foreground: 150 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Warm gold (wisdom, warmth) */
+    --accent: 38 65% 92%;
+    --accent-foreground: 38 50% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive - Muted coral (not alarming) */
+    --destructive: 0 55% 55%;
+    --destructive-foreground: 45 20% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and inputs */
+    --border: 150 15% 88%;
+    --input: 150 15% 88%;
+    --ring: 150 25% 35%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Sidebar - slightly darker than main */
+    --sidebar-background: 150 12% 96%;
+    --sidebar-foreground: 150 15% 30%;
+    --sidebar-primary: 150 25% 35%;
+    --sidebar-primary-foreground: 45 20% 98%;
+    --sidebar-accent: 150 15% 92%;
+    --sidebar-accent-foreground: 150 20% 25%;
+    --sidebar-border: 150 12% 88%;
+    --sidebar-ring: 150 25% 35%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom semantic tokens */
+    --crisis: 0 70% 50%;
+    --crisis-foreground: 0 0% 100%;
+    --calm: 150 25% 35%;
+    --wisdom: 38 65% 50%;
+    --mirror: 210 30% 50%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode - deep, restful tones */
+    --background: 150 15% 8%;
+    --foreground: 45 15% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 150 12% 10%;
+    --card-foreground: 45 15% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 150 12% 9%;
+    --popover-foreground: 45 15% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Primary - Lighter sage for visibility */
+    --primary: 150 30% 55%;
+    --primary-foreground: 150 15% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary */
+    --secondary: 150 12% 18%;
+    --secondary-foreground: 150 20% 80%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Muted */
+    --muted: 150 10% 15%;
+    --muted-foreground: 150 12% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Accent - Warm gold, slightly muted */
+    --accent: 38 40% 20%;
+    --accent-foreground: 38 50% 80%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive */
+    --destructive: 0 50% 40%;
+    --destructive-foreground: 45 15% 92%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Borders */
+    --border: 150 10% 18%;
+    --input: 150 10% 18%;
+    --ring: 150 30% 55%;
+
+    /* Sidebar */
+    --sidebar-background: 150 12% 7%;
+    --sidebar-foreground: 150 12% 85%;
+    --sidebar-primary: 150 30% 55%;
+    --sidebar-primary-foreground: 150 15% 8%;
+    --sidebar-accent: 150 10% 14%;
+    --sidebar-accent-foreground: 150 15% 85%;
+    --sidebar-border: 150 10% 15%;
+    --sidebar-ring: 150 30% 55%;
+
+    /* Custom tokens - dark mode */
+    --crisis: 0 65% 55%;
+    --crisis-foreground: 0 0% 100%;
+    --calm: 150 30% 55%;
+    --wisdom: 38 55% 55%;
+    --mirror: 210 35% 60%;
   }
 }
 
@@ -100,6 +134,106 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+}
+
+@layer components {
+  /* Crisis bar styling */
+  .crisis-bar {
+    @apply bg-[hsl(var(--crisis))] text-[hsl(var(--crisis-foreground))];
+  }
+
+  /* Mirror conversation bubble */
+  .mirror-bubble {
+    @apply bg-card border border-border rounded-2xl p-4 shadow-sm;
+  }
+
+  /* User bubble */
+  .user-bubble {
+    @apply bg-primary/10 border border-primary/20 rounded-2xl p-4;
+  }
+
+  /* Calm button variant */
+  .btn-calm {
+    @apply bg-[hsl(var(--calm))] text-[hsl(var(--primary-foreground))] 
+           hover:bg-[hsl(var(--calm))]/90 transition-colors;
+  }
+
+  /* Wisdom accent */
+  .wisdom-glow {
+    @apply bg-[hsl(var(--wisdom))]/10 border border-[hsl(var(--wisdom))]/30;
+  }
+
+  /* Flow card */
+  .flow-card {
+    @apply bg-card border border-border rounded-xl p-6 
+           hover:border-primary/30 hover:shadow-md transition-all cursor-pointer;
+  }
+
+  /* Pali term highlight */
+  .pali-term {
+    @apply text-[hsl(var(--wisdom))] font-medium 
+           hover:underline decoration-dotted cursor-help;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-breathe {
+    animation: breathe 4s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0; 
+      transform: translateY(20px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+
+  @keyframes breathe {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+
+  /* Prose styling for long-form content */
+  .prose-calm {
+    @apply leading-relaxed tracking-wide;
+  }
+
+  .prose-calm p {
+    @apply mb-4 text-foreground/90;
+  }
+
+  .prose-calm blockquote {
+    @apply border-l-4 border-primary/30 pl-4 italic text-muted-foreground;
   }
 }
