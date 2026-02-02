@@ -22,7 +22,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {/*
+        GitHub Pages hosts this app under a repo subpath (e.g. /dhamma-mirror/).
+        Using Vite's BASE_URL as the router basename keeps routes working in production.
+      */}
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <div className="min-h-screen flex flex-col">
           <CrisisBar />
           <Navigation />
